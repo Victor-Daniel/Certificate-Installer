@@ -1,8 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "VGEo3Z6oP5dFu2s58A/LVd5IxTocuST6x/ovESVRfghSQ72PnXgK9YAnOu/6ag/Pc6D7Jr/UsmhUBaRNvrK7cA==",
+  "dgSpecHash": "2KIDArrI6T6ZznFWV4Xc5QMgWiXHoTHLrKl5sJww9BtGHEFq0VhXE4c88Fzkda1hhU3nXtQJItvGEcoxpIg48Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Victor\\source\\repos\\Certificate-Installer\\Certificate-Installer\\Certificate-Installer\\Certificate-Installer.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "expectedPackageFiles": [
+    "C:\\Users\\Victor\\.nuget\\packages\\ini-parser\\2.5.2\\ini-parser.2.5.2.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'ini-parser 2.5.2' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "ini-parser",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }

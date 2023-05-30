@@ -1,0 +1,17 @@
+C:\Users\Victor\source\repos\Certificate-Installer\Certificate-Installer\Certificate-Installer\bin\Debug\net7.0\Certificate-Installer.exe
+C:\Users\Victor\source\repos\Certificate-Installer\Certificate-Installer\Certificate-Installer\bin\Debug\net7.0\Certificate-Installer.deps.json
+C:\Users\Victor\source\repos\Certificate-Installer\Certificate-Installer\Certificate-Installer\bin\Debug\net7.0\Certificate-Installer.runtimeconfig.json
+C:\Users\Victor\source\repos\Certificate-Installer\Certificate-Installer\Certificate-Installer\bin\Debug\net7.0\Certificate-Installer.dll
+C:\Users\Victor\source\repos\Certificate-Installer\Certificate-Installer\Certificate-Installer\bin\Debug\net7.0\Certificate-Installer.pdb
+C:\Users\Victor\source\repos\Certificate-Installer\Certificate-Installer\Certificate-Installer\bin\Debug\net7.0\INIFileParser.dll
+C:\Users\Victor\source\repos\Certificate-Installer\Certificate-Installer\Certificate-Installer\obj\Debug\net7.0\Certificate-Installer.csproj.AssemblyReference.cache
+C:\Users\Victor\source\repos\Certificate-Installer\Certificate-Installer\Certificate-Installer\obj\Debug\net7.0\Certificate-Installer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Victor\source\repos\Certificate-Installer\Certificate-Installer\Certificate-Installer\obj\Debug\net7.0\Certificate-Installer.AssemblyInfoInputs.cache
+C:\Users\Victor\source\repos\Certificate-Installer\Certificate-Installer\Certificate-Installer\obj\Debug\net7.0\Certificate-Installer.AssemblyInfo.cs
+C:\Users\Victor\source\repos\Certificate-Installer\Certificate-Installer\Certificate-Installer\obj\Debug\net7.0\Certificate-Installer.csproj.CoreCompileInputs.cache
+C:\Users\Victor\source\repos\Certificate-Installer\Certificate-Installer\Certificate-Installer\obj\Debug\net7.0\Certificate-Installer.csproj.CopyComplete
+C:\Users\Victor\source\repos\Certificate-Installer\Certificate-Installer\Certificate-Installer\obj\Debug\net7.0\Certificate-Installer.dll
+C:\Users\Victor\source\repos\Certificate-Installer\Certificate-Installer\Certificate-Installer\obj\Debug\net7.0\refint\Certificate-Installer.dll
+C:\Users\Victor\source\repos\Certificate-Installer\Certificate-Installer\Certificate-Installer\obj\Debug\net7.0\Certificate-Installer.pdb
+C:\Users\Victor\source\repos\Certificate-Installer\Certificate-Installer\Certificate-Installer\obj\Debug\net7.0\Certificate-Installer.genruntimeconfig.cache
+C:\Users\Victor\source\repos\Certificate-Installer\Certificate-Installer\Certificate-Installer\obj\Debug\net7.0\ref\Certificate-Installer.dll

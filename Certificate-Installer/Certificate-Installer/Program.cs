@@ -2,7 +2,8 @@
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using System.IO;
-using static System.Formats.Asn1.AsnWriter;
+using IniParser;
+using IniParser.Parser;
 
 class Inicio
 {
@@ -10,6 +11,7 @@ class Inicio
     {
         Certificate Certificado = new Certificate();
         Certificado.Verificar_Certificado();
+       
     }
 
 }
@@ -20,29 +22,48 @@ class Certificate
     public void Verificar_Certificado()
     {
         // INSTANCIA DE PARA CRIAR UM OBJETO PARA CLASSE DE CERTIFICADOS CHAMADA X509Store, NA QUAL VAI FAZER A CONEXÇAO COM A PASTA DE AUTORIDADE DE CERTIFICAÇÃO RAIZ
-        X509Store Certificado = new X509Store(StoreName.Root, StoreLocation.LocalMachine);
+        X509Store Certificado = new X509Store(StoreName.Root, StoreLocation.CurrentUser);
         //ABRINDO A CONEXÃO COM A PASTA E FAZENDO A LEITURA
         Certificado.Open(OpenFlags.ReadOnly);
-
-        //PEGANDO TODOS OS CERTIFICADOS E ADICIONANDO EM UMA LISTA OU COLEÇÃO    
-        // X509Certificate2Collection cert = Certificado.Certificates;
-
-        /*foreach (X509Certificate2 x509 in cert)
-        {
-            Console.WriteLine(x509.IssuerName.Name);
-           
-        }*/
-
-        var Certificates = Certificado.Certificates.Find(X509FindType.FindBySubjectName, "DigiCert", false);
-
-        if (Certificates != null && Certificates.Count > 0)
-        {
-            Console.WriteLine("Certificado Existe");
-        }
+        //FILTRANDO BUSCA POR CERTIFICADO BASEADO NO NOME
+        var Certificates = Certificado.Certificates.Find(X509FindType.FindBySubjectName, "*", false);
         // FECHANDO A CONEXÃO
         Certificado.Close();
-        
+
+        // VERIFICANDO SE O CERTIFICADO JÁ FOI INSTALADO
+        if (Certificates != null && Certificates.Count > 0)
+        {
+            Console.WriteLine("Certificado já está instalado no Usuario Local");
+        }
+        else
+        {
+            InstalarCertificado();
+        }
+    }
+
+    public void InstalarCertificado()
+    {
+        var Arquivo = new FileIniDataParser();
+        var Dados = Arquivo.ReadFile(@"..\..\..\Config.ini");
+
+        if (File.Exists(Dados["Certificado"]["Caminho"] + Dados["Certificado"]["NomedoArquivo"]))
+        {
+            // INICIANDO UMA CLASSE QUE RECEBE COMO PARAMETRO O CAMINHO DO CERTIFICADO PARA ADICIONAR
+            X509Certificate2 CertificateFile = new X509Certificate2(Dados["Certificado"]["Caminho"] + Dados["Certificado"]["NomedoArquivo"]);
+
+            // INSTANCIA DE PARA CRIAR UM OBJETO PARA CLASSE DE CERTIFICADOS CHAMADA X509Store, NA QUAL VAI FAZER A CONEXÇAO COM A PASTA DE AUTORIDADE DE CERTIFICAÇÃO RAIZ
+            X509Store Certificado = new X509Store(StoreName.Root, StoreLocation.CurrentUser);
+
+            //ABRINDO A CONEXÃO COM A PASTA E FAZENDO A LEITURA
+            Certificado.Open(OpenFlags.ReadWrite);
+            //ADICIONANDO CERTIFICADO
+            Certificado.Add(CertificateFile);
+            //FECHANDO CONEXÃO
+            Certificado.Close();
+        }
+        else
+        {
+            Console.WriteLine("Certificado nao encontrado!");
+        }
     }
 }
-
-//DigiCert
